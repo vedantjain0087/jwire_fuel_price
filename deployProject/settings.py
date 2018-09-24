@@ -55,8 +55,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost',
-    'https://vedantjain0087.github.io'
+    'localhost',
+    'vedantjain0087.github.io'
 )
 
 ROOT_URLCONF = 'deployProject.urls'
