@@ -56,7 +56,9 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (
     'localhost',
-    'vedantjain0087.github.io'
+    'localhost:3000',
+    'vedantjain0087.github.io',
+    'jwireinvoice.herokuapp.com'
 )
 
 ROOT_URLCONF = 'deployProject.urls'
