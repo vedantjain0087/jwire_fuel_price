@@ -60,6 +60,7 @@ CORS_ORIGIN_WHITELIST = (
     'vedantjain0087.github.io',
     'jwireinvoice.herokuapp.com'
 )
+CORS_REPLACE_HTTPS_REFERER = True
 
 ROOT_URLCONF = 'deployProject.urls'
 
