@@ -82,7 +82,7 @@ def get_standard_time(tm):
 
 @csrf_exempt
 def get_package_details(request):
-    track_no =  json.loads(request.body).track_no
+    track_no =  json.loads(request.body)['track_no']
     print(track_no) 
     try:
         header = {
