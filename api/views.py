@@ -6,6 +6,7 @@ import json
 import requests
 import datetime
 # Create your views here.
+
 def index(request):
     url = 'http://www.emeapromotions.com/screensaver/includes/apac-fuel/jp/jp-tab1-surcharge.html'
     agent = {"User-Agent":'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'}
@@ -78,7 +79,7 @@ def get_standard_time(tm):
     # format time 16:21
     return time
 
-
+@api_view(['POST'])
 def get_package_details(request):
     track_no = request.POST.get("track_no")
     try:
