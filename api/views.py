@@ -141,9 +141,9 @@ def get_package_details(request):
 
         result = {
             'tracking_no': int(track_no),
-            'ship date': attach_day(res_json['TrackPackagesResponse']['packageList'][0]['displayShipDt']),
+            'ship_date': attach_day(res_json['TrackPackagesResponse']['packageList'][0]['displayShipDt']),
             'status': res_json['TrackPackagesResponse']['packageList'][0]['keyStatus'],
-            'scheduled delivery': schld_deli
+            'scheduled_delivery': schld_deli
         }
         return HttpResponse(json.dumps({'result':result}), content_type='application/json')
 
