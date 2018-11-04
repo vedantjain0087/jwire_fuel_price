@@ -107,8 +107,6 @@ def get_package_details(request):
         }
 
         url = "https://www.fedex.com/trackingCal/track"
-        
-        print "Sending request ..."
 
         response = requests.post(url, data=data, headers=header)
 
