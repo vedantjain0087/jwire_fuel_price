@@ -80,7 +80,7 @@ def get_standard_time(tm):
     return time
 
 def get_package_details(request):
-    track_no = request.POST.get("track_no")
+    track_no = request.POST["track_no"]
     try:
         header = {
             'Origin': 'https://www.fedex.com',
