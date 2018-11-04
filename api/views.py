@@ -79,7 +79,6 @@ def get_standard_time(tm):
     # format time 16:21
     return time
 
-@api_view(['POST'])
 def get_package_details(request):
     track_no = request.POST.get("track_no")
     try:
