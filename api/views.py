@@ -82,8 +82,8 @@ def get_standard_time(tm):
 
 @csrf_exempt
 def get_package_details(request):
-    print(request.POST["track_no"])
-    track_no = request.POST["track_no"]
+    track_no =  request.POST.get('track_no', None)
+    print(track_no) 
     try:
         header = {
             'Origin': 'https://www.fedex.com',
