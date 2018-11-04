@@ -5,6 +5,7 @@ import urllib
 import json
 import requests
 import datetime
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 def index(request):
@@ -79,6 +80,7 @@ def get_standard_time(tm):
     # format time 16:21
     return time
 
+@csrf_exempt
 def get_package_details(request):
     track_no = request.POST["track_no"]
     try:
