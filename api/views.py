@@ -110,16 +110,16 @@ def get_package_details(request):
 
         response = requests.post(url, data=data, headers=header)
 
-        # if response.status_code == 200:
-        #     print "response received successfully\n"
-        # else:
-        #     print "request failed, error code : ",response.status_code
-        #     return
+        if response.status_code == 200:
+            print("response received successfully\n")
+        else:
+            print("request failed, error code : ",response.status_code)
+            return
 
         res_json = response.json()
 
         if res_json['TrackPackagesResponse']['packageList'][0]['errorList'][0]['message'] != "":
-            print res_json['TrackPackagesResponse']['packageList'][0]['errorList'][0]['message']
+            print(res_json['TrackPackagesResponse']['packageList'][0]['errorList'][0]['message'])
             # exists the function if package id is wrong
             return
 
@@ -145,4 +145,4 @@ def get_package_details(request):
         return HttpResponse(json.dumps({'result':result}), content_type='application/json')
 
     except Exception as e:
-        print 'Error occurred : \n Error Message: ' + str(e)
+        print('Error occurred : \n Error Message: ' + str(e))
