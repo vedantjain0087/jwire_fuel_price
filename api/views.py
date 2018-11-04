@@ -82,6 +82,7 @@ def get_standard_time(tm):
 
 @csrf_exempt
 def get_package_details(request):
+    print(json.loads(request.body))
     track_no =  request.POST.get('track_no', None)
     print(track_no) 
     try:
