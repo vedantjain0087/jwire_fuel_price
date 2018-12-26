@@ -59,9 +59,9 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
     'vedantjain0087.github.io',
     'jwireinvoice.herokuapp.com',
-    'http://18.182.66.23:3000',
-    'http://18.182.66.23',
-    'http://awesome-vedant.000webhostapp.com'
+    '18.182.66.23:3000',
+    '18.182.66.23',
+    'awesome-vedant.000webhostapp.com'
 )
 CORS_REPLACE_HTTPS_REFERER = True
 
